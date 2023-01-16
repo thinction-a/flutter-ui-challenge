@@ -24,6 +24,7 @@ class App extends StatelessWidget {
             vertical: 16,
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -64,94 +65,137 @@ class App extends StatelessWidget {
               SizedBox(
                 height: 16,
               ),
-              SizedBox(
-                width: 1000,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Total Balance",
-                      style: TextStyle(
-                          color: Colors.white.withOpacity(.8),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w300),
-                    ),
-                    Text(
-                      "\$5 194 382",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 32,
-                          fontWeight: FontWeight.w800),
-                    ),
-                  ],
+              Text(
+                "Total Balance",
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white.withOpacity(.8),
                 ),
               ),
               SizedBox(
-                height: 16,
+                height: 5,
+              ),
+              Text(
+                "\$5 194 382",
+                style: TextStyle(
+                  fontSize: 48,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                height: 30,
               ),
               Row(
                 children: [
-                  Flexible(
-                      fit: FlexFit.tight,
-                      child: TextButton(
-                        onPressed: (() => print('Transfer')),
-                        child: Text(
-                          'Transfer',
-                          style: TextStyle(
-                            color: Color(0xFF181818),
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                            Color(0xFFF2B33A),
-                          ),
-                          shape: MaterialStateProperty.all(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(40),
-                            ),
-                          ),
-                          padding: MaterialStateProperty.all(
-                            EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 16,
-                            ),
-                          ),
-                        ),
-                      )),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Flexible(
-                    fit: FlexFit.tight,
-                    child: TextButton(
-                      onPressed: (() => print('Request')),
-                      child: Text(
-                        'Request',
-                        style: TextStyle(
-                            color: Color(0xFFFAFAFA),
-                            fontWeight: FontWeight.w300),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFFF2B33A),
+                      borderRadius: BorderRadius.circular(45),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 50,
                       ),
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(255, 52, 52, 52),
-                        ),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40),
-                          ),
-                        ),
-                        padding: MaterialStateProperty.all(
-                          EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 16,
-                          ),
+                      child: Text(
+                        'Transfer',
+                        style: TextStyle(
+                          fontSize: 20,
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
-              ),
+              )
+              // SizedBox(
+              //   width: 1000,
+              //   child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Text(
+              //         "Total Balance",
+              //         style: TextStyle(
+              //             color: Colors.white.withOpacity(.8),
+              //             fontSize: 16,
+              //             fontWeight: FontWeight.w300),
+              //       ),
+              //       Text(
+              //         "\$5 194 382",
+              //         style: TextStyle(
+              //             color: Colors.white,
+              //             fontSize: 32,
+              //             fontWeight: FontWeight.w800),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // SizedBox(
+              //   height: 16,
+              // ),
+              // Row(
+              //   children: [
+              //     Flexible(
+              //         fit: FlexFit.tight,
+              //         child: TextButton(
+              //           onPressed: (() => print('Transfer')),
+              //           child: Text(
+              //             'Transfer',
+              //             style: TextStyle(
+              //               color: Color(0xFF181818),
+              //               fontWeight: FontWeight.w300,
+              //             ),
+              //           ),
+              //           style: ButtonStyle(
+              //             backgroundColor: MaterialStateProperty.all(
+              //               Color(0xFFF2B33A),
+              //             ),
+              //             shape: MaterialStateProperty.all(
+              //               RoundedRectangleBorder(
+              //                 borderRadius: BorderRadius.circular(40),
+              //               ),
+              //             ),
+              //             padding: MaterialStateProperty.all(
+              //               EdgeInsets.symmetric(
+              //                 horizontal: 16,
+              //                 vertical: 16,
+              //               ),
+              //             ),
+              //           ),
+              //         )),
+              //     SizedBox(
+              //       width: 10,
+              //     ),
+              //     Flexible(
+              //       fit: FlexFit.tight,
+              //       child: TextButton(
+              //         onPressed: (() => print('Request')),
+              //         child: Text(
+              //           'Request',
+              //           style: TextStyle(
+              //               color: Color(0xFFFAFAFA),
+              //               fontWeight: FontWeight.w300),
+              //         ),
+              //         style: ButtonStyle(
+              //           backgroundColor: MaterialStateProperty.all(
+              //             Color.fromARGB(255, 52, 52, 52),
+              //           ),
+              //           shape: MaterialStateProperty.all(
+              //             RoundedRectangleBorder(
+              //               borderRadius: BorderRadius.circular(40),
+              //             ),
+              //           ),
+              //           padding: MaterialStateProperty.all(
+              //             EdgeInsets.symmetric(
+              //               horizontal: 16,
+              //               vertical: 16,
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //     )
+              //   ],
+              // ),
             ],
           ),
         ),
